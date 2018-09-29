@@ -34,9 +34,9 @@ class VkScheduler(models.Model):
 
     def automator_start(self):
         _logger.info("automator_start called")
-        self.env['mail.message'].create(values={
-            'type':'email',
-            'subject':'Hello from VkAutomator',
-            'body': 'VkAutomator ___',
-            'partner_ids': [(4, 3, 1)], })
+        self.env['mail.channel'].message_post(
+                body="Notification from Automator",
+                channel_ids=[(4,1)],
+                subject="Automator",
+                partner_ids=[(4, 3)],)
 
