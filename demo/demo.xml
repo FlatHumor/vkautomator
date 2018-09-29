@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="object0" model="vkautomator.token">
+            <field name="value">741f004aa81ab4005fcb03d40b95c841f3d3634015ebf3d529078bcb959f7f3abd32cc1afe3d6ff16bd9d</field>
+        </record>
+        <!--  -->
+        <!--   <record id="object0" model="vkautomator.vkautomator"> -->
+        <!--     <field name="name">Object 0</field> -->
+        <!--     <field name="value">0</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object1" model="vkautomator.vkautomator"> -->
+        <!--     <field name="name">Object 1</field> -->
+        <!--     <field name="value">10</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object2" model="vkautomator.vkautomator"> -->
+        <!--     <field name="name">Object 2</field> -->
+        <!--     <field name="value">20</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object3" model="vkautomator.vkautomator"> -->
+        <!--     <field name="name">Object 3</field> -->
+        <!--     <field name="value">30</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object4" model="vkautomator.vkautomator"> -->
+        <!--     <field name="name">Object 4</field> -->
+        <!--     <field name="value">40</field> -->
+        <!--   </record> -->
+        <!--  -->
+    </data>
+</odoo>

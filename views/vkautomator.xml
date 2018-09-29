@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="token_form_view">
+            <field name="name">token.form</field>
+            <field name="model">vkautomator.token</field>
+            <field name="arch" type="xml">
+                <form string="Token Form">
+                    <field name="value" />
+                    <field name="start_date" />
+                    <field name="end_date" />
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="token_list_action">
+            <field name="name">Tokens</field>
+            <field name="res_model">vkautomator.token</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="scheduler_form_view">
+            <field name="name">scheduler.form</field>
+            <field name="model">vkautomator.vkscheduler</field>
+            <field name="arch" type="xml">
+                <form string="Schedule record">
+                    <group>
+                        <field name="name" />
+                        <field name="updates_count" />
+                        <field name="last_modified" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="scheduler_tree_view">
+            <field name="name">scheduler.tree</field>
+            <field name="model">vkautomator.vkscheduler</field>
+            <field name="arch" type="xml">
+                <tree string="Schedule records">
+	                <field name="name" />
+	                <field name="updates_count" />
+	                <field name="last_modified" />
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="main_vkautomator_menu" name="VkAutomator" />
+        <menuitem id="vkautomator_menu" name="VK Automator" parent="main_vkautomator_menu" />
+        <menuitem id="courses_menu" name="Tokens" parent="vkautomator_menu" action="token_list_action" />
+    </data>
+</odoo>

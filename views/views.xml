@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="vkautomator.list">
+      <field name="name">vkautomator list</field>
+      <field name="model">vkautomator.vkautomator</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="vkautomator.action_window">
+      <field name="name">vkautomator window</field>
+      <field name="res_model">vkautomator.vkautomator</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="vkautomator.action_server">
+      <field name="name">vkautomator server</field>
+      <field name="model_id" ref="model_vkautomator_vkautomator"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="vkautomator" id="vkautomator.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="vkautomator.menu_1" parent="vkautomator.menu_root"/>
+    <menuitem name="Menu 2" id="vkautomator.menu_2" parent="vkautomator.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="vkautomator.menu_1_list" parent="vkautomator.menu_1"
+              action="vkautomator.action_window"/>
+    <menuitem name="Server to list" id="vkautomator" parent="vkautomator.menu_2"
+              action="vkautomator.action_server"/>
+    -->
+  </data>
+</odoo>
