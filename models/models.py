@@ -3,10 +3,16 @@
 from datetime import timedelta
 from odoo import models, fields, api
 
+from ..vkclient.little_client import LittleClient
+from ..vkclient.looper import LittleLooper
+
 import sys
 import logging
+import threading
 
 _logger = logging.getLogger(__name__)
+
+TOKEN = '000000'
 
 class Token(models.Model):
     _name = 'vkautomator.token'
@@ -32,6 +38,7 @@ class VkScheduler(models.Model):
     updates_count = fields.Integer()
     last_modified = fields.Date()
 
+    @api.model
     def automator_start(self):
         _logger.info("automator_start called")
         self.env['mail.channel'].message_post(
@@ -39,4 +46,14 @@ class VkScheduler(models.Model):
                 channel_ids=[(4,1)],
                 subject="Automator",
                 partner_ids=[(4, 3)],)
+
+    @api.model
+    def vk_client_start(self):
+        _logger.info("vk_client_start called")
+        client = LittleClient(TOKEN)
+        looper = LittleLooper()
+        looper.set_callback(_logger.info)
+        threading.Thread(target=looper.loop, args=(client.get_new_message, )).start()
+
+    
 
